@@ -1,5 +1,5 @@
-PixelPerfect
-============
+The PixelPerfect FreeType font setup
+====================================
 
 Pixel-perfect font rendering under Wayland and X.org.
 
@@ -13,9 +13,10 @@ small sizes, similarly to Windows pre-ClearType font rendering.
 How to install
 --------------
 
-Clone this repository and link its directory as ~/.config/fontconfig/.
+Clone this repository and link its directory as ``~/.config/fontconfig/``.
 
-Download latest released font packages and unpack them to ~/.local/share/fonts/.
+Download latest released font packages and unpack them to
+``~/.local/share/fonts/``.
 
 
 .. image:: https://img.shields.io/badge/License-MIT-yellow.svg
