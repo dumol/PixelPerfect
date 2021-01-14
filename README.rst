@@ -4,10 +4,15 @@ The PixelPerfect FreeType font setup
 Pixel-perfect font rendering under Wayland and X.org.
 
 Custom Fontconfig rules trying to cover all “web safe fonts” with aliases to
-high-quality typefaces released under a free-software license.
+similar, ideally metrically-equivalent, high-quality typefaces released
+under a free-software license.
 
-Uses exquisitely-hinted fonts to enhance text rendering on low DPI devices at
-small sizes, similarly to Windows pre-ClearType font rendering.
+Uses exquisitely-hinted fonts to enhance text rendering at small sizes
+for most used “web safe” typefaces on low DPI devices, similarly to
+Windows pre-ClearType font rendering.
+
+Ideally, most web pages should look sane and keep their character even if
+your browser doesn't load any external fonts at all.
 
 
 How to install
