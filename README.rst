@@ -1,5 +1,5 @@
-The _PixelPerfect_ FreeType font setup
-======================================
+The PixelPerfect FreeType font setup
+====================================
 
 Pixel-perfect font rendering under Wayland and X.org.
 
