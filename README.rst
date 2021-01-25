@@ -1,10 +1,10 @@
-The PixelPerfect FreeType font setup
-====================================
+The _PixelPerfect_ FreeType font setup
+======================================
 
 Pixel-perfect font rendering under Wayland and X.org.
 
 Custom Fontconfig rules trying to cover all “web safe fonts” with aliases to
-similar, ideally metrically-equivalent, high-quality typefaces released
+similar — ideally metrically-equivalent — high-quality typefaces released
 under a free-software license.
 
 Uses exquisitely-hinted fonts to enhance text rendering at small sizes
