@@ -18,7 +18,7 @@ your browser doesn't load any external fonts at all.
 How to install
 --------------
 
-Clone this repository and link its directory as ``~/.config/fontconfig/``.
+Download latest release and link its directory as ``~/.config/fontconfig/``.
 
 Download latest released font packages and unpack them to
 ``~/.local/share/fonts/``.
