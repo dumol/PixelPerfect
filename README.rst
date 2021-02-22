@@ -12,7 +12,9 @@ for most used “web safe” typefaces on low DPI devices, similarly to
 Windows pre-ClearType font rendering.
 
 Ideally, most web pages should look sane and keep their character even if
-your browser doesn't load any external fonts at all.
+your browser doesn't load any external fonts at all. Reasons to avoid loading
+external fonts, especially on mobile connections: security, privacy, bandwidth.
+More at https://collinmbarrett.com/block-web-fonts/.
 
 
 How to install
