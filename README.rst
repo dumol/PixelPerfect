@@ -16,13 +16,18 @@ your browser doesn't load any external fonts at all. Reasons to avoid loading
 external fonts, especially on mobile connections: security, privacy, bandwidth.
 More at https://collinmbarrett.com/block-web-fonts/.
 
+Here's a comparative screenshot taken on Debian 10 with default settings
+and the PixelPerfect setup:
+
+.. image:: https://github.com/dumol/PixelPerfect/raw/assets/Debian10.gif
 
 How to install
 --------------
 
-Download latest release and link its directory as ``~/.config/fontconfig/``.
+Download latest source package from Releases and link or copy/move
+its directory as ``~/.config/fontconfig/``.
 
-Download latest released font packages and unpack them to
+Download latest font packages from Releases and unpack them to
 ``~/.local/share/fonts/``.
 
 
