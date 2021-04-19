@@ -25,17 +25,17 @@ and the PixelPerfect setup:
 Installation
 ------------
 
-Automated::
+**Automated**::
 
     curl -sL https://github.com/dumol/PixelPerfect/raw/assets/install.sh | sh -
 
-Manual:
+**Manual**:
 
-    1. Download latest source package from **Releases** and link or copy/move
-       its directory as ``~/.config/fontconfig``.
-    2. Download latest font packages from **Releases** and unpack them to
-       ``~/.local/share/fonts/``.
-    3. Logout and login again.
+1. Download latest source package from **Releases** and link or copy/move
+   its directory as ``~/.config/fontconfig``.
+2. Download latest font packages from **Releases** and unpack them to
+   ``~/.local/share/fonts/``.
+3. Logout and login again.
 
 
 Development
