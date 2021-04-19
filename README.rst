@@ -22,18 +22,28 @@ and the PixelPerfect setup:
 .. image:: https://github.com/dumol/PixelPerfect/raw/assets/Debian10.gif
 
 
-How to install
---------------
+Installation
+------------
 
-Download latest source package from **Releases** and link or copy/move
-its directory as ``~/.config/fontconfig``.
-
-Download latest font packages from **Releases** and unpack them to
-``~/.local/share/fonts/``.
-
-Alternatively, try the automated installer::
+Automated::
 
     curl -sL https://github.com/dumol/PixelPerfect/raw/assets/install.sh | sh -
+
+Manual:
+
+    1. Download latest source package from **Releases** and link or copy/move
+       its directory as ``~/.config/fontconfig``.
+    2. Download latest font packages from **Releases** and unpack them to
+       ``~/.local/share/fonts/``.
+    3. Logout and login again.
+
+
+Development
+-----------
+
+Install as instructed above, but replace the stable sources in ``~/.fontconfig``
+with a link to a clone of this repo or your fork. FontConfig rules in master
+branch are fully compatible with the latest released font packages.
 
 
 .. image:: https://img.shields.io/badge/License-MIT-yellow.svg
