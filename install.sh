@@ -35,7 +35,7 @@ for user_dir in ${user_config_dir} ${user_font_dir}; do
 done
 
 echo "Downloading and unpacking release $current_ver to /tmp..."
-curl -s -L ${release_archive} | tar xz -C /tmp
+curl -s -L ${release_archive} | tar xzf - -C /tmp
 if [ -d ${user_config_dir}/fontconfig ]; then
     echo "Found ${user_config_dir}/fontconfig, renaming it..."
     mv -v ${user_config_dir}/fontconfig ${user_config_dir}/fontconfig.bkp
@@ -46,7 +46,7 @@ mv /tmp/${repo_name}-${current_ver} ${user_config_dir}/fontconfig
 for font_pkg in common-aliases common-extra lowdpi-aliases lowdpi-extra; do
     echo "Installing $font_pkg font package to ${user_font_dir}..."
     curl -s -L ${pkg_url_common}/${font_pkg}-v${current_ver}.tar.gz \
-        | tar xz -C ${user_font_dir}
+        | tar xzf - -C ${user_font_dir}
 done
 
 echo
