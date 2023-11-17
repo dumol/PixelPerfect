@@ -37,6 +37,11 @@ Installation
    ``~/.local/share/fonts/``.
 3. Logout and login again.
 
+To have this working for Flatpak apps::
+
+    flatpak override --user --filesystem=xdg-config/fontconfig
+    flatpak override --user --filesystem=xdg-data/fonts
+
 
 Development
 -----------
