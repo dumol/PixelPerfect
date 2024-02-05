@@ -37,10 +37,22 @@ Installation
    ``~/.local/share/fonts/``.
 3. Logout and login again.
 
-To have this working for Flatpak apps::
+To set GNOME fonts from command line (adjust the size of 10 if needed)::
 
-    flatpak override --user --filesystem=xdg-config/fontconfig
-    flatpak override --user --filesystem=xdg-data/fonts
+    gsettings set org.gnome.desktop.interface font-name 'system-ui 10'
+    gsettings set org.gnome.desktop.interface monospace-font-name 'monospace 10'
+
+To have this setup working for Flatpak apps::
+
+    flatpak override --user --filesystem=xdg-config/fontconfig:ro
+    flatpak override --user --filesystem=xdg-data/fonts:ro
+
+To have this setup working for a Snap package such as Firefox::
+
+    ln -s ~/.local/share/fonts ~/snap/firefox/current/.local/share/fonts
+    mv -v ~/snap/firefox/current/.config/fontconfig{,.orig}
+    ln -s ~/.config/fontconfig ~/snap/firefox/current/.config/fontconfig
+    fc-cache -f -r
 
 
 Development
