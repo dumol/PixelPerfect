@@ -21,6 +21,11 @@ and the PixelPerfect setup:
 
 .. image:: https://github.com/dumol/PixelPerfect/raw/assets/Debian10.gif
 
+This setup doesn't include any "color fonts". Emoji symbols, up to and including
+those from Unicode 15.0, are supported through a regular "black emoji" font.
+For coloured emoji, install an emoji font supported by your OS and apps.
+There is currently no acceptable solution to cover all cases.
+
 
 Installation
 ------------
