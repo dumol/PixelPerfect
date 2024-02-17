@@ -21,6 +21,11 @@ and the PixelPerfect setup:
 
 .. image:: https://github.com/dumol/PixelPerfect/raw/assets/Debian10.gif
 
+This setup doesn't include any "color fonts". Emoji symbols, up to and including
+those from Unicode 15.0, are supported through a regular "black emoji" font.
+For coloured emoji, install an emoji font supported by your OS and apps.
+There is currently no acceptable solution to cover all cases.
+
 
 Installation
 ------------
@@ -36,6 +41,23 @@ Installation
 2. Download latest font packages from **Releases** and unpack them to
    ``~/.local/share/fonts/``.
 3. Logout and login again.
+
+To set GNOME fonts from command line (adjust the size of 10 if needed)::
+
+    gsettings set org.gnome.desktop.interface font-name 'system-ui 10'
+    gsettings set org.gnome.desktop.interface monospace-font-name 'monospace 10'
+
+To have this setup working for Flatpak apps::
+
+    flatpak override --user --filesystem=xdg-config/fontconfig:ro
+    flatpak override --user --filesystem=xdg-data/fonts:ro
+
+To have this setup working for a Snap package such as Firefox::
+
+    ln -s ~/.local/share/fonts ~/snap/firefox/current/.local/share/fonts
+    mv -v ~/snap/firefox/current/.config/fontconfig{,.orig}
+    ln -s ~/.config/fontconfig ~/snap/firefox/current/.config/fontconfig
+    fc-cache -f -r
 
 
 Development
