@@ -42,10 +42,19 @@ Installation
    ``~/.local/share/fonts/``.
 3. Logout and login again.
 
-To set GNOME fonts from command line (adjust the size of 10 if needed)::
+To set GNOME fonts from command line::
 
-    gsettings set org.gnome.desktop.interface font-name 'system-ui 10'
-    gsettings set org.gnome.desktop.interface monospace-font-name 'monospace 10'
+    gsettings set org.gnome.desktop.interface font-name 'system-ui 11'
+    gsettings set org.gnome.desktop.interface document-font-name 'ui-serif 10'
+    gsettings set org.gnome.desktop.interface monospace-font-name 'ui-monospace 10'
+
+Adjust the above sizes if needed. Alternatively, set a scaling factor for text.
+For example, instead of using sizes of 13 and 12 points for the above, use::
+
+    gsettings set org.gnome.desktop.interface text-scaling-factor "1.2"
+
+Beware that `text-scaling-factor` usually also affects the size of app widgets.
+For example, UI elements in Firefox, like the address bar and tabs, get bigger.
 
 To have this setup working for Flatpak apps::
 
