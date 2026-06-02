@@ -72,9 +72,10 @@ To have this setup working for a Snap package such as Firefox::
 Development
 -----------
 
-Install as instructed above, but replace the stable sources in ``~/.fontconfig``
-with a link to a clone of this repo or your fork. FontConfig rules in master
-branch are fully compatible with the latest released font packages.
+Install as instructed above, but replace the stable sources in
+``~/.config/fontconfig`` with a link to a clone of this repo or your fork.
+FontConfig rules in master branch are fully compatible with
+latest released font packages.
 
 
 .. image:: https://img.shields.io/badge/License-MIT-yellow.svg
