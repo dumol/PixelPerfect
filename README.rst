@@ -21,6 +21,11 @@ and the PixelPerfect setup:
 
 .. image:: https://github.com/dumol/PixelPerfect/raw/assets/Debian10.gif
 
+This setup doesn't include any "color fonts". Emoji symbols, up to and including
+those from Unicode 15.0, are supported through a regular "black emoji" font.
+For coloured emoji, install an emoji font supported by your OS and apps.
+There is currently no acceptable solution to cover all cases.
+
 
 Installation
 ------------
@@ -37,13 +42,40 @@ Installation
    ``~/.local/share/fonts/``.
 3. Logout and login again.
 
+To set GNOME fonts from command line::
+
+    gsettings set org.gnome.desktop.interface font-name 'system-ui 11'
+    gsettings set org.gnome.desktop.interface document-font-name 'ui-serif 10'
+    gsettings set org.gnome.desktop.interface monospace-font-name 'ui-monospace 10'
+
+Adjust the above sizes if needed. Alternatively, set a scaling factor for text.
+For example, instead of using sizes of 13 and 12 points for the above, use::
+
+    gsettings set org.gnome.desktop.interface text-scaling-factor "1.2"
+
+Beware that `text-scaling-factor` usually also affects the size of app widgets.
+For example, UI elements in Firefox, like the address bar and tabs, get bigger.
+
+To have this setup working for Flatpak apps::
+
+    flatpak override --user --filesystem=xdg-config/fontconfig:ro
+    flatpak override --user --filesystem=xdg-data/fonts:ro
+
+To have this setup working for a Snap package such as Firefox::
+
+    ln -s ~/.local/share/fonts ~/snap/firefox/current/.local/share/fonts
+    mv -v ~/snap/firefox/current/.config/fontconfig{,.orig}
+    ln -s ~/.config/fontconfig ~/snap/firefox/current/.config/fontconfig
+    fc-cache -f -r
+
 
 Development
 -----------
 
-Install as instructed above, but replace the stable sources in ``~/.fontconfig``
-with a link to a clone of this repo or your fork. FontConfig rules in master
-branch are fully compatible with the latest released font packages.
+Install as instructed above, but replace the stable sources in
+``~/.config/fontconfig`` with a link to a clone of this repo or your fork.
+FontConfig rules in master branch are fully compatible with
+latest released font packages.
 
 
 .. image:: https://img.shields.io/badge/License-MIT-yellow.svg
